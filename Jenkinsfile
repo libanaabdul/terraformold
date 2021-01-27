@@ -5,7 +5,7 @@ pipeline {
       agent any
       steps {
         echo 'Placeholder'
-        sh 'echo Edited Placeholder.'
+        sh 'echo "I am a ${BUZZ_NAME}"'
       }
     }
 
@@ -22,5 +22,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    BUZZ_NAME = 'Worker Bee'
   }
 }
